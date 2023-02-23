@@ -130,6 +130,9 @@ def game_loop():
                             if event.key == pygame.K_x:
                                 quit_game = True
                                 end = True
+                            if event.key == pygame.K_q:
+                                quit_game = True
+                                end = True
                             if event.key == pygame.K_r:
                                 end = True, game_loop()  # Restart the main game loop
                             if event.key == pygame.K_SPACE:
@@ -188,18 +191,18 @@ def game_loop():
 
         pygame.display.update()
 
-        print(f"Snake_x: {snake_x}")
-        print(f"Food_x: {food_x}")
-        print(f"Snake_y: {snake_y}")
-        print(f"Food_y: {food_y}")
-        print("\n\n")
+        # print(f"Snake_x: {snake_x}")
+        # print(f"Food_x: {food_x}")
+        # print(f"Snake_y: {snake_y}")
+        # print(f"Food_y: {food_y}")
+        # print("\n\n")
 
         # Collision detection (see if snake touches food)
         if snake_x == food_x and snake_y == food_y:
             # Set random position for food if snake touches it:
             food_x = round(random.randrange(20, 1000 - 20) / 20) * 20
             food_y = round(random.randrange(20, 750 - 20) / 20) * 20
-            print("Got it!")
+            # print("Got it!")
 
             # Increase length of snake (by original size)
             snake_length += 1
