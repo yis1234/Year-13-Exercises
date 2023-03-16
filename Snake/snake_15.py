@@ -5,7 +5,7 @@ import random
 pygame.init()
 
 screen = pygame.display.set_mode((1000, 750))
-game_icon = pygame.image.load('snake_icon.png')
+game_icon = pygame.image.load('Snake/snake_icon.png')
 pygame.display.set_icon(game_icon)
 pygame.display.set_caption("Snake game – by Sun Woo Yi")
 
@@ -185,7 +185,7 @@ def game_loop():
 
         # Create circle for food
         food = pygame.Rect(food_x, food_y, 20, 20)
-        apple = pygame.image.load('apple_3.png').convert_alpha()
+        apple = pygame.image.load('Snake/apple_3.png').convert_alpha()
         resized_apple = pygame.transform.smoothscale(apple, [20, 20])
         screen.blit(resized_apple, food)
 
