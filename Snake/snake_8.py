@@ -5,7 +5,7 @@ import random
 pygame.init()
 
 screen = pygame.display.set_mode((1000, 750))
-game_icon = pygame.image.load('snake_icon.png')
+game_icon = pygame.image.load('Snake/snake_icon.png')
 pygame.display.set_icon(game_icon)
 pygame.display.set_caption("Snake game – by Sun Woo Yi")
 

@@ -90,7 +90,7 @@ def transfer():
         if user.account_no == acc:
             print(f"First Name: {user.first_name}")
             print(f"Last Name: {user.last_name}")
-            print(f"Balance: {user.balance}")
+            print(f"Balance: ${user.balance:,.2f}")
             transfer = float(input("Enter Amount to Transfer: "))
             firstname = user.first_name
             lastname = user.last_name
